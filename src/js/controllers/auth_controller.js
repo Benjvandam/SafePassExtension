@@ -5,6 +5,10 @@ import { setSessionStorage, clearSessionStorage } from "../services/storage_serv
 class AuthController extends Controller {
   static targets = ["email", "password", "flash"]
 
+  async connect() {
+    document.addEventListener("auth:signOut", this.signOut.bind(this))
+  }
+
   async signIn(event) {
     try {
       const response = await fetch("http://localhost:3000/api/v1/auth", {
