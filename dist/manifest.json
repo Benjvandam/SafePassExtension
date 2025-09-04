@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SafePassApp",
+  "description": "Chrome extension for SafePass web application.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "SafePass",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage", "tabs", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

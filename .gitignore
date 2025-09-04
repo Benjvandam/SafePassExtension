@@ -1,0 +1,6 @@
+.DS_Store
+/dist/bootstrap-icons-*
+/dist/assets/
+/node_modules
+yarn-error.log
+yarn.lock

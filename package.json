@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "name": "safe-pass",
+  "author": "SafePassApp",
+  "description": "Chrome extension for SafePass web application.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node build.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.1"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.13",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}
