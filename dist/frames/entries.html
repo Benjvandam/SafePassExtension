@@ -1,0 +1,34 @@
+<turbo-frame id="app">
+  <nav class="navbar navbar-expand border-bottom bg-white">
+    <div class="container-fluid d-flex">
+      <a class="navbar-brand">
+        <i class="bi bi-safe-fill"></i>
+      </a>
+      <form class="d-flex flex-grow-1 position-relative" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </input>
+        <button class="btn btn-sm btn-primary entry-search-button">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <button 
+                class="dropdown-item"
+                data-controller="auth"
+                data-action="click->auth#signOut"
+              >
+                Sign Out
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</turbo-frame>
