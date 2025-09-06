@@ -9,6 +9,10 @@ class AuthController extends Controller {
     document.addEventListener("auth:signOut", this.signOut.bind(this))
   }
 
+  disconnect() {
+    document.removeEventListener("auth:signOut", this.signOut.bind(this))
+  }
+
   async signIn(event) {
     try {
       const response = await fetch("http://localhost:3000/api/v1/auth", {

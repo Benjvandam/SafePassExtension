@@ -11,6 +11,12 @@ const fetchEntries = async() => {
       },
     })
 
+    if (!response.ok) {
+      console.log("Response not ok, status:", response.status)
+      document.dispatchEvent(new CustomEvent('auth:signOut'))
+      return
+    }
+
     const entries = await response.json()
 
     if (entries.errors) {
